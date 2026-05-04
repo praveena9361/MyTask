@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fab fa-spotify"></i>
+                <span>Spotify</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> <span>Search</span></a></li>
+                </ul>
+            </nav>
+            <div class="library-section">
+                <div class="library-header">
+                    <div class="lib-title"><i class="fas fa-book"></i> Your Library</div>
+                    <div class="lib-actions"><i class="fas fa-plus"></i> <i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="filters">
+                    <button class="filter-btn">Playlists</button>
+                    <button class="filter-btn">Artists</button>
+                </div>
+                <div class="playlist-container" id="sidebar-playlists">
+                    <!-- Dynamic Playlists -->
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="nav-arrows">
+                    <button class="arrow-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="arrow-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="user-profile">
+                    <button class="upgrade-btn">Explore Premium</button>
+                    <button class="install-btn"><i class="far fa-arrow-alt-circle-down"></i> Install App</button>
+                    <button class="profile-btn"><i class="far fa-user"></i></button>
+                </div>
+            </header>
+            <div class="content-wrapper">
+                <h2 class="greeting">Good afternoon</h2>
+                <div class="recent-grid" id="recent-grid">
+                    <!-- Dynamic Recent Items -->
+                </div>
+
+                <div class="section-title">
+                    <h2>Made For You</h2>
+                    <a href="#">Show all</a>
+                </div>
+                <div class="cards-grid" id="made-for-you-grid">
+                    <!-- Dynamic Cards -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="playbar">
+        <div class="now-playing">
+            <img src="" alt="" class="track-art" id="current-art">
+            <div class="track-info">
+                <div class="track-name" id="current-title">--</div>
+                <div class="track-artist" id="current-artist">--</div>
+            </div>
+            <button class="like-btn"><i class="far fa-heart"></i></button>
+        </div>
+        
+        <div class="player-controls">
+            <div class="control-buttons">
+                <button class="control-btn shuffle"><i class="fas fa-random"></i></button>
+                <button class="control-btn prev" id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                <button class="play-btn" id="play-pause-btn"><i class="fas fa-play" id="play-icon"></i></button>
+                <button class="control-btn next" id="next-btn"><i class="fas fa-step-forward"></i></button>
+                <button class="control-btn repeat"><i class="fas fa-redo"></i></button>
+            </div>
+            <div class="playback-bar">
+                <span class="time current-time" id="current-time">0:00</span>
+                <div class="progress-container" id="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <span class="time total-time" id="total-time">0:00</span>
+            </div>
+        </div>
+
+        <div class="extra-controls">
+            <button class="control-btn"><i class="fas fa-play-square"></i></button>
+            <button class="control-btn"><i class="fas fa-microphone"></i></button>
+            <button class="control-btn"><i class="fas fa-list"></i></button>
+            <button class="control-btn"><i class="fas fa-laptop-house"></i></button>
+            <div class="volume-control">
+                <i class="fas fa-volume-up" id="volume-icon"></i>
+                <div class="volume-container" id="volume-container">
+                    <div class="volume-bar" id="volume-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
